@@ -7,7 +7,7 @@ body{
     background-position: center;
     background-size: cover;
 }
-#myCanvas
+#canvas
 {
 	border-width:10px;
 	background-color: white; 
@@ -24,11 +24,15 @@ h1,h4
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<title>Moving Rover On</title>
 </head>
-<body>
+<body onload= "add()">
 <center>
+	
 <h1>Moving Rover On Mars</h1>
+<canvas id = "canvas" width = "700" height="600">
+
+</canvas>
 <h4>
-	<b>NOTE : </b> IF ROVER IS NOT VISIABLE PRESS ANY ARROW KEY
+	<b class = "text-danger">NOTE : </b> IF ROVER IS NOT VISIABLE PRESS ANY ARROW KEY
 </h4>
 
 </center>

@@ -23,12 +23,12 @@ function add()
 
 function upload_mars()
 {
-    ctx.drawImage(mars,0,0,canvas.width,canvas.height);
+    ctx.drawImage(mars_img,0,0,canvas.width,canvas.height);
 }
 
 function upload_rover()
 {
-    ctx.drawImage(rover,x,y,rover_width,rover_height);
+    ctx.drawImage(rover_img,x,y,rover_width,rover_height);
 }
 
 window.addEventListener("keydown",keydown);
@@ -57,4 +57,44 @@ function keydown(e)
     }
 
     
+}
+
+function up()
+{
+    if (y>=0)
+    {
+        y=y-10;
+        upload_mars();
+        upload_rover();
+    }
+}
+
+function down()
+{
+     if(y<=500)
+     {
+        y=y+10;
+        upload_mars();
+        upload_rover();
+     }
+}
+
+function left()
+{
+    if(x>=0)
+    {
+     x=x-10;
+     upload_mars();
+     upload_rover();
+    }
+}
+
+function right()
+{
+    if(x<=600)
+    {
+        x=x+10;
+        upload_mars();
+        upload_rover();   
+    }
 }
